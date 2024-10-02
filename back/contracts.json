@@ -1,0 +1,9 @@
+{
+    "name": "Third Contract",
+    "type": "purchase",
+    "planStartDate": "2002-07-10",
+    "planEndDate": "2020-08-11",
+    "actualStartDate": "2002-07-10",
+    "actualEndDate": "2020-08-11",
+    "monetaryValue": 2000
+}
