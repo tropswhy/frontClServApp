@@ -3,5 +3,6 @@ import { ref, computed } from 'vue'
 import contractBD from '../../back/contracts.json'
 
 export const useContractStore = defineStore('contractStore', () => {
-    const contracts = ref <object>(contractBD)
+    const contracts = ref(contractBD)
+    return { contracts }
 })
