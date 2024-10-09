@@ -4,6 +4,7 @@
 		<v-data-table-server
 			v-model:items-per-page="itemsPerPage"
 			:headers="HEADERS"
+			:items="contractors"
 		/>
 	</v-container>
 </template>
@@ -12,20 +13,31 @@
 	import ButtonMenu from '../ui/ButtonMenu.vue'
 	import AppBar from '../ui/AppBar.vue'
 	import { ref } from 'vue'
-
+	import { useContractorStore } from '../../stores/ContractorStore.ts'
 	const itemsPerPage = ref<number>(5)
+	const contractorFromStore = useContractorStore().contractors
 	const HEADERS = [
 		{
-			title: 'Договоры',
 			align: 'start',
 			sortable: false,
 			key: 'name',
 		},
 		{ title: 'Название', key: 'contractorName', align: 'end' },
-		{ title: 'Тип договора', key: 'contractType', align: 'end' },
-		{ title: 'Организация-контрагент', key: 'contractor', align: 'end' },
-		{ title: 'Сумма договора', key: 'contractSum', align: 'end' },
-		{ title: 'Плановые сроки', key: 'plannedDate', align: 'end' },
-		{ title: 'Фактически сроки', key: 'factedDate', align: 'end' },
+		{ title: 'Адрес', key: 'contractorAddress', align: 'end' },
+		{ title: 'ИНН', key: 'contractorINN', align: 'end' },
+	]
+	const contractors = [
+		{
+			contractorName: contractorFromStore.name,
+			contractorAddress: contractorFromStore.address,
+			contractorINN: contractorFromStore.inn.inn,
+		},
 	]
 </script>
+{
+    "name": "Contractor",
+    "address": "Novokuznetsk",
+    "inn": {
+        "inn": "123123123"
+    }
+}
