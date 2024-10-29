@@ -1,0 +1,117 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 2,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 3,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 4,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 5,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 6,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 7,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 8,
+            "name": null,
+            "address": null,
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 9,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 17,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 18,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 19,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": {
+                "inn": "123",
+                "contractorId": 19
+            },
+            "contractWithContractorId": null
+        },
+        {
+            "id": 20,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": null,
+            "contractWithContractorId": null
+        },
+        {
+            "id": 21,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": {
+                "inn": "123123123",
+                "contractorId": 21
+            },
+            "contractWithContractorId": null
+        },
+        {
+            "id": 22,
+            "name": "Contractor",
+            "address": "Novokuznetsk",
+            "inn": null,
+            "contractWithContractorId": null
+        }
+    ],
+    "httpStatus": "OK",
+    "message": ""
+}

@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "id": 5,
+            "name": "New Stage",
+            "planStartDate": "2002-07-10",
+            "planEndDate": "2002-07-10",
+            "actualStartDate": "2002-07-10",
+            "actualEndDate": "2002-07-10",
+            "monetaryValue": 12345,
+            "contractId": 4,
+            "spendingMaterials": [],
+            "spendingSalaries": []
+        },
+        {
+            "id": 6,
+            "name": "Second sub Stage",
+            "planStartDate": "2002-07-10",
+            "planEndDate": "2002-07-10",
+            "actualStartDate": "2002-07-10",
+            "actualEndDate": "2002-07-10",
+            "monetaryValue": 22222,
+            "contractId": 4,
+            "spendingMaterials": [],
+            "spendingSalaries": []
+        },
+        {
+            "id": 7,
+            "name": "Next sub Stage",
+            "planStartDate": "2002-07-10",
+            "planEndDate": "2002-07-10",
+            "actualStartDate": "2002-07-10",
+            "actualEndDate": "2002-07-10",
+            "monetaryValue": 111111,
+            "contractId": 4,
+            "spendingMaterials": [],
+            "spendingSalaries": []
+        }
+    ],
+    "httpStatus": "OK",
+    "message": "Requested Contract Stage Details are given here"
+}
