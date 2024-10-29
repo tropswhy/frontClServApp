@@ -1,5 +1,3 @@
 import { defineStore } from 'pinia'
 
-export const useContractStageStore = defineStore('contractStageStore', () => {
-    
-})
+export const useContractStageStore = defineStore('contractStageStore', () => {})

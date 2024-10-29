@@ -10,9 +10,9 @@ import router from './router'
 
 const app = createApp(App)
 const vuetify = createVuetify({
-  components,
-  directives,
-  iconfont: 'mdi',  
+	components,
+	directives,
+	iconfont: 'mdi',
 })
 
 app.use(createPinia())
