@@ -81,34 +81,29 @@
             "id": 19,
             "name": "Contractor",
             "address": "Novokuznetsk",
-            "inn": {
-                "inn": "123",
-                "contractorId": 19
-            },
+            "inn": "123",
             "contractWithContractorId": null
         },
         {
             "id": 20,
             "name": "Contractor",
             "address": "Novokuznetsk",
-            "inn": null,
+            "inn": "241241",
             "contractWithContractorId": null
         },
         {
             "id": 21,
             "name": "Contractor",
             "address": "Novokuznetsk",
-            "inn": {
-                "inn": "123123123",
-                "contractorId": 21
-            },
+            "inn": "123123123",
+
             "contractWithContractorId": null
         },
         {
             "id": 22,
             "name": "Contractor",
             "address": "Novokuznetsk",
-            "inn": null,
+            "inn": "5675675",
             "contractWithContractorId": null
         }
     ],
