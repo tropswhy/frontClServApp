@@ -4,14 +4,14 @@
 	<v-container class="text-center">
 		<v-table>
 			<thead>
-				<th class="text-left"></th>
-				<th class="text-left">Договоры</th>
-				<th class="text-left">Тип договора</th>
-				<th class="text-left">Плановые сроки</th>
-				<th class="text-left">Фактические сроки</th>
-				<th class="text-left">Сумма договора</th>
-				<th class="text-left">Этапы</th>
-				<th class="text-left">Контрагенты</th>
+				<th class="ml-5"></th>
+				<th class="text-center">Договоры</th>
+				<th class="text-center">Тип договора</th>
+				<th class="text-center">Плановые сроки</th>
+				<th class="text-center">Фактические сроки</th>
+				<th class="text-center">Сумма договора</th>
+				<th class="text-center">Этапы</th>
+				<th class="text-center">Контрагенты</th>
 			</thead>
 			<tbody>
 				<tr
@@ -88,24 +88,7 @@
 	import { useContractStore } from '../../stores/ContractStore.ts'
 	const contractStore = useContractStore()
 	const contractFromStore = contractStore.contracts
-	const openDialog = ref<boolean>(false)
 	const itemsPerPage = ref<number>(5)
-	const HEADERS = [
-		{
-			title: 'Договоры',
-			align: 'start',
-			sortable: false,
-			key: 'name',
-		},
-		{ title: 'Тип договора', key: 'type', align: 'end' },
-		{ title: 'Плановые сроки начала', key: 'planStartDate', align: 'end' },
-		{ title: 'Плановые сроки окончания', key: 'planEndDate', align: 'end' },
-		{ title: 'Фактически сроки начала', key: 'actualStartDate', align: 'end' },
-		{ title: 'Фактически сроки окончания', key: 'actualEndDate', align: 'end' },
-		{ title: 'Сумма договора', key: 'monetaryValue', align: 'end' },
-		{ title: 'Этапы', key: 'stages', align: 'end' },
-		{ title: 'Контрагенты', key: 'subContracts', align: 'end' },
-	]
 	interface Contract {
 		readonly id: number
 		name: string
@@ -146,22 +129,4 @@
 	}
 
 	const contracts: Contract[] = [...contractFromStore]
-
-	/* 	const contractr = [] */
-	//contractFromStore.forEach()
-	/* const contracts = [
-			{
-				contractName: contractFromStore[1].name,
-				contractType: contractFromStore[1].type,
-				plannedDate:
-					contractFromStore[1].planStartDate +
-					' — ' +
-					contractFromStore[1].planEndDate,
-				factedDate:
-					contractFromStore[1].actualStartDate +
-					' — ' +
-					contractFromStore[1].actualEndDate,
-				contractSum: contractFromStore[1].monetaryValue,
-			},
-		] */
 </script>
