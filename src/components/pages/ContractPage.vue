@@ -39,19 +39,34 @@
 								<v-btn
 									variant="text"
 									size="x-small"
-									>Отркыть таблицу этапов</v-btn
+									@click="$router.push({
+										name: 'stage',
+										params: {
+											contractId: item.id,
+										}
+									})"
 								>
+									Отркыть таблицу этапов
+								</v-btn>
 							</td>
 							<td>
 								<v-btn
 									variant="text"
 									size="x-small"
-									>Отркыть таблицу контрагентов</v-btn
+									@click="$router.push({
+										name: 'subContracts',
+										params: {
+											contractId: item.id,
+										}
+									})"
 								>
+									Отркыть таблицу субконтрактов
+								</v-btn>
 							</td>
 						</template>
 						<template v-slot:default="{ isActive }">
 							<ContractCard
+								:id="item.id"
 								:name="item.name"
 								:type="item.type"
 								:platStartDate="item.planStartDate"
@@ -59,6 +74,8 @@
 								:actualStarDate="item.actualStartDate"
 								:actualEndDate="item.actualEndDate"
 								:monetaryValue="item.monetaryValue"
+								:stages="item.stages"
+								:subContracts="item.subContracts"
 							>
 								<v-btn
 									variant="plain"
@@ -84,24 +101,8 @@
 	import ButtonMenu from '../ui/ButtonMenu.vue'
 	import AppBar from '../ui/AppBar.vue'
 	import ContractCard from '../ui/ContractCard.vue'
-	import { ref } from 'vue'
+	import { ref, computed } from 'vue'
 	import { useContractStore } from '../../stores/ContractStore.ts'
-	const contractStore = useContractStore()
-	const contractFromStore = contractStore.contracts
-	const itemsPerPage = ref<number>(5)
-	interface Contract {
-		readonly id: number
-		name: string
-		type: string
-		planStartDate: string
-		planEndDate: string
-		actualStartDate: string
-		actualEndDate: string
-		monetaryValue: number
-		stages?: Stage[]
-		subContracts?: SubContract[]
-	}
-
 	interface Stage {
 		readonly id: number
 		name: string
@@ -111,15 +112,15 @@
 		actualEndDate: string
 		monetaryValue: number
 		contractId: number
-		spendingMaterials?: []
-		spendingSalaries?: []
+		spendingMaterials?: [] | null
+		spendingSalaries?: [] | null
 	}
 
 	interface SubContract {
 		readonly id: number
 		name: string
 		type: string
-		monetaryValue?: number
+		monetaryValue?: number | null
 		planStartDate: string
 		planEndDate: string
 		actualStartDate: string
@@ -128,5 +129,35 @@
 		contractId: number
 	}
 
-	const contracts: Contract[] = [...contractFromStore]
+	interface Contract {
+		readonly id: number
+		name: string
+		type: string
+		planStartDate: string
+		planEndDate: string
+		actualStartDate: string
+		actualEndDate: string
+		monetaryValue: number
+		stages?: Stage[] | null
+		subContracts?: SubContract[] | null
+	}
+	const contractStore = useContractStore()
+	const contracts = computed<Contract[]> (() => {
+		const result = contractStore.contracts
+		if (result === undefined || result.length === 0) {
+			return []
+		} else {
+			return result
+		}
+	}) 
+	const itemsPerPage = ref<number>(5)
+
+
+	
+	//const contracts: Contract[] = [...contractFromStore.value]
+
+	contracts.value.forEach((contract) => {
+		console.log(contractStore.getStagesByContractId(contract.id))
+		console.log(contractStore.getSubContractsByContractId(contract.id))
+	})
 </script>

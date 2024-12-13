@@ -1,4 +1,4 @@
-[
+[ 
 	{
 		"id": 4,
 		"name": "First Contract",
@@ -18,8 +18,29 @@
 				"actualEndDate": "2002-07-10",
 				"monetaryValue": 12345,
 				"contractId": 4,
-				"spendingMaterials": [],
-				"spendingSalaries": []
+				"spendingMaterials": [
+					{
+							"name": "Линзы",
+							"monetaryValue": 10000
+					},
+					{
+							"name": "Frame",
+							"monetaryValue": 15000
+					}
+			],
+				
+				"spendingSalaries": [
+					{
+							"name": "Andrey",
+							"surname": "Noiman",
+							"monetaryValue": 300000
+					},
+					{
+							"name": "Danil",
+							"surname": "Karzhavin",
+							"monetaryValue": 300000
+					}
+			]
 			},
 			{
 				"id": 6,
@@ -30,8 +51,29 @@
 				"actualEndDate": "2002-07-10",
 				"monetaryValue": 22222,
 				"contractId": 4,
-				"spendingMaterials": [],
-				"spendingSalaries": []
+				"spendingMaterials": [
+					{
+							"name": "Линзы",
+							"monetaryValue": 10000
+					},
+					{
+							"name": "Frame",
+							"monetaryValue": 15000
+					}
+			],
+				
+				"spendingSalaries": [
+					{
+							"name": "Andrey",
+							"surname": "Noiman",
+							"monetaryValue": 300000
+					},
+					{
+							"name": "Danil",
+							"surname": "Karzhavin",
+							"monetaryValue": 300000
+					}
+			]
 			},
 			{
 				"id": 7,
@@ -42,8 +84,29 @@
 				"actualEndDate": "2002-07-10",
 				"monetaryValue": 111111,
 				"contractId": 4,
-				"spendingMaterials": [],
-				"spendingSalaries": []
+				"spendingMaterials": [
+					{
+							"name": "Линзы",
+							"monetaryValue": 10000
+					},
+					{
+							"name": "Frame",
+							"monetaryValue": 15000
+					}
+			],
+				
+				"spendingSalaries": [
+					{
+							"name": "Andrey",
+							"surname": "Noiman",
+							"monetaryValue": 300000
+					},
+					{
+							"name": "Danil",
+							"surname": "Karzhavin",
+							"monetaryValue": 300000
+					}
+			]
 			}
 		],
 		"subContracts": []
@@ -248,8 +311,29 @@
 				"actualEndDate": "2002-07-10",
 				"monetaryValue": 111111,
 				"contractId": 18,
-				"spendingMaterials": [],
-				"spendingSalaries": []
+				"spendingMaterials": [
+					{
+							"name": "Линзы",
+							"monetaryValue": 10000
+					},
+					{
+							"name": "Frame",
+							"monetaryValue": 15000
+					}
+			],
+				
+				"spendingSalaries": [
+					{
+							"name": "Andrey",
+							"surname": "Noiman",
+							"monetaryValue": 300000
+					},
+					{
+							"name": "Danil",
+							"surname": "Karzhavin",
+							"monetaryValue": 300000
+					}
+			]
 			}
 		],
 		"subContracts": []

@@ -4,6 +4,8 @@ import ContractPage from '../components/pages/ContractPage.vue'
 import ContractorPage from '../components/pages/ContractorPage.vue'
 import ReportPage from '../components/pages/ReportPage.vue'
 import AdminPage from '../components/pages/AdminPage.vue'
+import SubContractPage from '../components/pages/SubContractPage.vue'
+import StagePage from '../components/pages/StagePage.vue'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -32,6 +34,16 @@ const router = createRouter({
 			path: '/admin',
 			name: 'admin',
 			component: AdminPage,
+		},
+		{
+			path: '/subcontracts/:contractId',
+			name: 'subContracts',
+			component: SubContractPage,
+		},
+		{
+			path: '/stages/:contractId',
+			name: 'stage',
+			component: StagePage,
 		},
 	],
 })

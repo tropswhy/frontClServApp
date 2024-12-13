@@ -4,7 +4,7 @@
 			size="x-large"
 			color="secondary"
 		>
-			<slot />
+			<slot/>
 		</v-btn>
 	</v-col>
 </template>
